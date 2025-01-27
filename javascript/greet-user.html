@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greet User</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    input, button {
+      font-size: 16px;
+      padding: 8px;
+      margin: 10px;
+    }
+    .greeting {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #28a745;
+    }
+  </style>
+</head>
+<body>
+  <h1>Greet User</h1>
+  <p>Enter your name below:</p>
+  <input type="text" id="userName" placeholder="Enter your name">
+  <button onclick="greetUser()">Greet</button>
+  <div class="greeting" id="greetingMessage"></div>
+
+  <script>
+    function greetUser() {
+      const name = document.getElementById("userName").value;
+      const message = name ? `Hello, ${name}!` : "Please enter your name.";
+      document.getElementById("greetingMessage").textContent = message;
+    }
+  </script>
+</body>
+</html>
